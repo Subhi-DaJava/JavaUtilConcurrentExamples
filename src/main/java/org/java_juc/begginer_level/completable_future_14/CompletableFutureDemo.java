@@ -20,7 +20,7 @@ public class CompletableFutureDemo {
         // ASync
        CompletableFuture<String> completableFutureAsync = CompletableFuture.supplyAsync(()-> {
            System.out.println(Thread.currentThread().getName() + " : completableFutureASync");
-           return "Full number"+147;
+           return "Full number" + 147;
        });
 
         try {

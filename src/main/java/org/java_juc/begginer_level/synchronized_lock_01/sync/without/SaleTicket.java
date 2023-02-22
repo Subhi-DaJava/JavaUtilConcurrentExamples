@@ -13,6 +13,7 @@ class Ticket {
 }
 public class SaleTicket {
     public static void main(String[] args) {
+        int poolSize = Runtime.getRuntime().availableProcessors();
         Ticket ticketSansSync = new Ticket();
 
         new Thread(new Runnable() {
@@ -38,5 +39,8 @@ public class SaleTicket {
                     ticketSansSync.saleTicket();
             }
         }, "T3").start();
+
+
+        System.out.println("he number of processors : " + poolSize);
     }
 }
